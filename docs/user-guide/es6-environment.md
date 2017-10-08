@@ -1,4 +1,4 @@
-# Linting Configuration
+# Prettier With ESLint/Stylint
 
 ## Quick Setup (ES2015/ES6)
 
@@ -285,4 +285,69 @@ You can configure Stylelint either by creating a `.stylelintrc` file or by addin
 
 *In progress...*
 
-## VSCode Integration
+## Visual Studio Code Integration
+
+For VSCode integration, install the following Visual Studio Code extensions from the Visual Studio Marketplace:
+
+- [Prettier - JavaScript formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+
+`settings.json`
+
+```json
+{
+  // Basic Editor Settings
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 80,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // File Specific Settings
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false,
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+
+  // Stylelint Settings
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+
+  // Prettier Settings
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.parser": "babylon",
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 80,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSpacing": true,
+  "prettier.ignorePath": ".prettierignore"
+}
+
+```
