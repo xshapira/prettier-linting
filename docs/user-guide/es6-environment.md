@@ -72,7 +72,7 @@ npm install -g prettier
 
 ## Prettier With ESLint
 
-If you're using Prettier with [ESLint](https://eslint.org/), you'll need to install [prettier-eslint](https://github.com/prettier/prettier-eslint) as an npm package *globally* for you text editor integration via extensions and as a *devDependency* in your project. `prettier-eslint` formats your JavaScript using prettier followed by `eslint --fix`.
+If you're using Prettier with [ESLint](https://eslint.org/), you'll need to install [prettier-eslint](https://github.com/prettier/prettier-eslint) as an npm package *globally*. This will be needed Prettier text editor integration via extensions and as a *devDependency* in your project. `prettier-eslint` formats your JavaScript using prettier followed by `eslint --fix`.
 
 **Note: The following instructions assumes you have Prettier setup as mentioned previously.**
 
@@ -118,7 +118,7 @@ After executing `eslint --init`, a file named `.eslinrc.json` should have been c
 
 #### Adding eslint-config-standard Manually
 
-To install `eslint-config-standard` run the following command via npm:
+To install `eslint-config-standard` and it's dependencies, run the following command via npm:
 
 ```sh
 npm install --save-dev eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
@@ -142,7 +142,7 @@ To avoid having rule conflicts with Prettier and ESLint, install [eslint-config-
 npm install --save-dev eslint-config-prettier
 ```
 
-Once you've installed the npm package `eslint-config-prettier`, you'll need to add `"prettier"` last in the `extend` property of the [ESLint configuration file](#eslint-configuration-file) to override any conflicting rules set by `eslint-config-standard`.
+Once you've installed the npm package `eslint-config-prettier`, you'll need to add `"prettier"` last in the `"extend"` property of the [ESLint configuration file](#eslint-configuration-file) to override any conflicting rules set by `eslint-config-standard`.
 
 ```json
 {
@@ -161,7 +161,7 @@ Installing [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-pr
 npm install --save-dev eslint-plugin-prettier
 ```
 
-The `eslint-plugin-prettier` ruleset configuration should be added as `"prettier"` to the `"plugins"` property of the [ESLint configuration file](#eslint-configuration-file). In addition, add `"prettier/prettier"` rules
+The `eslint-plugin-prettier` ESLint plugin should be added as `"prettier"` to the `"plugins"` property of the [ESLint configuration file](#eslint-configuration-file). In addition, you'll need to enable `"prettier/prettier"` errors in your rules.
 
 `.eslintrc`
 
@@ -180,7 +180,7 @@ The `eslint-plugin-prettier` ruleset configuration should be added as `"prettier
 
 ### ESLint Configuration File
 
-You can configure ESLint either by creating a `.eslintrc` file or by adding a `"eslintConig"` key in your `package.json` file.
+You can configure ESLint by either creating a `.eslintrc` file or by adding a `"eslintConig"` key in your `package.json` file.
 
 `.eslintrc`:
 
