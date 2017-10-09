@@ -255,7 +255,7 @@ To avoid having rule conflicts with Prettier and Styelint, add `"./node_modules/
 
 ### Stylint Configuration File
 
-You can configure Stylelint either by creating a `.stylelintrc` file or by adding a `"eslintConig"` key in your `package.json` file.
+You can configure Stylelint either by creating a `.stylelintrc` file or by adding a `"stylelint"` key in your `package.json` file.
 
 `.stylelintrc`
 
