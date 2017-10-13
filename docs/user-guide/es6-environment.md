@@ -20,7 +20,7 @@ The quick setup guide will configure your project to use [Prettier](https://gith
     ```json
     {
         "prettier": {
-            "printWidth": 80,
+            "printWidth": 100,
             "tabWidth": 2,
             "useTabs": false,
             "semi": true,
@@ -299,9 +299,9 @@ For VSCode integration, install the following Visual Studio Code extensions from
 {
   // Basic Editor Settings
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80],
+  "editor.rulers": [100],
   "editor.tabSize": 2,
-  "editor.wordWrapColumn": 80,
+  "editor.wordWrapColumn": 100,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -342,7 +342,7 @@ For VSCode integration, install the following Visual Studio Code extensions from
   "prettier.parser": "babylon",
   "prettier.useTabs": false,
   "prettier.tabWidth": 2,
-  "prettier.printWidth": 80,
+  "prettier.printWidth": 100,
   "prettier.singleQuote": true,
   "prettier.semi": true,
   "prettier.trailingComma": "none",
